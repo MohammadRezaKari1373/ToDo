@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { userActions } from "../_actions";
+import { userActions } from "../actions";
 import "./LoginPage.css";
 
 class LoginPage extends React.Component {
@@ -40,10 +40,10 @@ class LoginPage extends React.Component {
     const { loggingIn } = this.props;
     const { email, password, submitted } = this.state;
     return (
-      <div className="col-md-6 col-md-offset-3 login-form">
+      <div className="login-form">
         <h2>
-          <span className="first">Meeting-</span>
-          <span className="second">time</span>
+          <span className="first">App-</span>
+          <span className="second">TodoList</span>
         </h2>
         <h6>ورود به حساب کاربری</h6>
         <form name="form" onSubmit={this.handleSubmit}>

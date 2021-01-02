@@ -1,12 +1,12 @@
 import React from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { history } from "../_helpers";
-import { alertActions } from "../_actions";
-import { PrivateRoute } from "../_components";
+import { history } from "../helpers";
+import { alertActions } from "../actions";
+import { PrivateRoute } from "../components";
 import { LoginPage } from "../LoginPage";
 import { RegisterPage } from "../RegisterPage";
-import { HomePage } from "../HomePage";
+import { PanelPage } from "../panel";
 
 class App extends React.Component {
   constructor(props) {
@@ -21,16 +21,16 @@ class App extends React.Component {
   render() {
     const { alert } = this.props;
     return (
-      <div className="col-md-12">
+      <div>
         {alert.message && (
           <div className={`alert ${alert.type}`}>{alert.message}</div>
         )}
         <Router history={history}>
           <Switch>
-            <PrivateRoute exact path="/" component={HomePage} />
+            <PrivateRoute exact path="/panel" component={PanelPage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/register" component={RegisterPage} />
-            <Redirect from="*" to="/" />
+            <Redirect from="*" to="/panel" />
           </Switch>
         </Router>
       </div>

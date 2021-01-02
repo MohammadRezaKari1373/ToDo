@@ -3,7 +3,7 @@ import "./RegisterPage.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { userActions } from "../_actions";
+import { userActions } from "../actions";
 
 class RegisterPage extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class RegisterPage extends React.Component {
     const { registering } = this.props;
     const { user, submitted } = this.state;
     return (
-      <div className="col-md-6 col-md-offset-3 register-form">
+      <div className="register-form">
         <h2> ایجاد حساب کاربری </h2>{" "}
         <form name="form" onSubmit={this.handleSubmit}>
           <div
@@ -119,7 +119,7 @@ class RegisterPage extends React.Component {
             )}
             <Link to="/login" className="btn btn-link">
               {" "}
-              Cancel{" "}
+              انصراف{" "}
             </Link>{" "}
           </div>
         </form>

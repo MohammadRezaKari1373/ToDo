@@ -1,0 +1,51 @@
+li {
+  border-bottom: 1px solid #e2c2c2;
+  font-size: 20px;
+  list-style: none;
+  direction: rtl;
+}
+
+.view {
+  text-align: left !important;
+  padding-top: 20px;
+}
+.view:hover {
+  background-color: #f4f6ff;
+  transition: all 1ms;
+}
+.view .toggle {
+  float: left;
+  margin-top: 9px;
+  margin-right: 10px;
+}
+
+.destroy {
+  color: red;
+  float: right;
+}
+.view label {
+  color: #34373d;
+  font-size: 16px;
+}
+.completed .view label {
+  color: #c1e1e2;
+  text-decoration: line-through;
+}
+
+.iconeedite {
+  color: #0078d7;
+  float: right;
+  margin-right: 20px;
+}
+.edit {
+  width: 100%;
+  height: 40px;
+  padding: 16px 12px;
+  font-size: 16px;
+  transition: none;
+  color: #34373d;
+  text-align: left;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+}
